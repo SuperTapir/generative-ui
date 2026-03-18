@@ -14,14 +14,47 @@ https://github.com/user-attachments/assets/1cb88122-0fe3-4e12-8d09-593df393122a
 
 LLM calls a `show_widget` tool → generates HTML/SVG → the library renders it inline with streaming DOM diffing via morphdom. Charts, diagrams, interactive controls, animations — all rendered progressively as tokens arrive.
 
-## Quick start
+## Getting started
+
+### 1. Clone and install
 
 ```bash
+git clone https://github.com/SuperTapir/generative-ui-demo.git
+cd generative-ui-demo
 npm install
+```
+
+### 2. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your settings:
+
+```bash
+# LLM Provider: "anthropic" or "openai"
+LLM_PROVIDER=anthropic
+
+# API Base URL (auto-appends /v1/messages or /v1/chat/completions)
+LLM_BASE_URL=https://api.anthropic.com
+
+# Model name
+LLM_MODEL=claude-sonnet-4-6
+
+# Your API key
+LLM_API_KEY=sk-your-api-key-here
+```
+
+> **Using a proxy or local gateway?** Just set `LLM_BASE_URL` to your endpoint — the server auto-appends the correct path based on the provider.
+
+### 3. Run
+
+```bash
 npm run dev
 ```
 
-Open http://localhost:3000, enter your API key, and ask the model to visualize something.
+Open http://localhost:3000 and ask the model to visualize something.
 
 ## Architecture
 

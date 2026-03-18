@@ -6,7 +6,7 @@ Inspired by [Claude's generative UI system](https://michaellivs.com/blog/reverse
 
 ## Demo
 
-https://github.com/SuperTapir/generative-ui-demo/raw/main/assets/demo.mp4
+https://github.com/user-attachments/assets/1cb88122-0fe3-4e12-8d09-593df393122a
 
 ## What it does
 
